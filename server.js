@@ -10,6 +10,17 @@ if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
 }
 
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/nytreact", {
+	useMongoClient: true
+});
+
+/* TODO move db stuff out*/
+const db = require("./models");
+console.log(db.Article);
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
