@@ -1,84 +1,19 @@
-# Create React Express App
+This solution uses [create-react-app](https://github.com/facebookincubator/create-react-app).
 
-## About This Boilerplate
+To run locally:
+* `npm install`
+* `npm run start` (starts the express server)
+* `cd client`
+* `npm install` (yep, again in the client/ folder!)
+* `npm run start` (starts the webpack dev server)
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+That will start the dev server and open a tab to <http://localhost:3000/>. The express-based piece of the homework will be running on <http://localhost:4000/>.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following commands:
-
-```
-yarn install
-cd client
-yarn install
-cd ..
-``
-
-After both installations complete, run the following command in your terminal:
-
-```
-yarn start
-```
-
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-### Create a Git Repo
-
-Once you're ready to deploy, start by making sure your project is a git repository. If so, proceed to the next section, otherwise run the following commands in your terminal:
-
-```
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### Heroku
-
-Make sure that you have a Heroku app created for this project. If so, proceed to the next section, otherwise run the following command in your terminal:
-
-```
-heroku create
-```
-
-Optionally add an argument for your application's name after `create`, e.g.
-
-```
-heroku myawesomeapp
-```
-
-### Deploying
-
-#### Option 1
-
-Use the deploy script inside of the outer `package.json`
-
-After confirming that you have an up to date git repository and a Heroku app created, run the following command to deploy:
-
-```
-yarn deploy
-```
-
-If all previous steps were followed correctly, your application should be deployed to Heroku!
-
-#### Option 2
-
-Manually deploy 
-
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
-
-1. Build the React app for production by running the following command:
-
-```
-yarn build
-```
-
-2. Add and commit all changes to git
-
-3. Push to Heroku
-
-If all previous steps were followed correctly, your application should be deployed to Heroku!
+To deploy to heroku:
+* **copy this folder to a location outside the current repo**
+* `git init`
+* `echo node_modules > .gitignore`
+* `git add .`
+* `git commit -m "Initial commit"`
+* `heroku create` (likely to take a while, if it times out, run again)
+* `git push heroku master`

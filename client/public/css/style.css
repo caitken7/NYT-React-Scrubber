@@ -1,0 +1,49 @@
+/*<!-- Style to fix the issue of text extending past panel length -->*/
+.panel-body a {
+	word-break: break-all;
+}
+
+.navbar,
+.panel-heading {
+	background: linear-gradient(30deg, #000428, #004e92);
+	color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar,
+.panel,
+.main-container {
+	font-family: times-new-roman;
+}
+
+.jumbotron {
+	background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+		url("../img/newspaper.jpg");
+	color: white;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+.navbar,
+.panel-heading,
+.jumbotron,
+.panel {
+	border-radius: 2px !important;
+}
+
+#logo {
+	height: 26px;
+	display: inline;
+	margin-right: 10px;
+}
+
+#reactLogo {
+	height: 120px;
+	display: block;
+	margin: auto;
+}
