@@ -1,6 +1,6 @@
 # NYT-React-Scrubber
 
-### [Click to visit the app](https://hidden-dusk-19393.herokuapp.com/articles)
+### [Click to visit the app](https://stormy-scrubland-56440.herokuapp.com/)
 ## App Functionalities
 * Search The New York Times for articles by topic and year.
 * View and save articles.
